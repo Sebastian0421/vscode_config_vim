@@ -1,0 +1,389 @@
+{
+	"matlab.mlintpath": "D:\\MatlabR2021a\\bin\\win64\\mlint.exe",
+	"matlab.matlabpath": "D:\\MatlabR2021a\\bin\\matlab.exe",
+	"matlab.linterEncoding": "utf-8",
+	"code-runner.executorMap": {
+		"matlab": "cd $dir && matlab -nosplash -nodesktop -r $fileNameWithoutExt",
+	},
+	"files.associations": {
+		"*.m": "matlab",
+	},
+	"code-runner.runInTerminal": true,
+	"files.autoGuessEncoding": true,
+	"editor.fontFamily": "FiraCode Nerd Font",
+	"editor.fontSize": 17,
+	"editor.lineNumbers": "relative",
+	/* vim settings start */
+	"vim.camelCaseMotion.enable": true,
+	"vim.easymotion": true,
+	"vim.foldfix": true, // to avoid fold open up autocamatically
+	"vim.sneak": false,
+	"vim.surround": true,
+	"vim.useCtrlKeys": false,
+	"vim.useSystemClipboard": true,
+	"vim.vimrc.enable": true,
+	"vim.vimrc.path": "$HOME/.vsvimrc",
+	"vim.handleKeys": {
+		"<C-a>": false,
+		"<C-f>": false,
+		"<C-i>": true,
+		"<C-o>": true,
+		"<C-r>": true,
+		"<C-s>": false,
+		"<C-v>": true,
+		"<C-w>": true
+	},
+	"vim.hlsearch": true,
+	"vim.incsearch": true,
+	"vim.leader": " ",
+	"vim.normalModeKeyBindings": [
+		{ // which key
+			"before": [
+				"`"
+			],
+			"commands": [
+				"whichkey.show"
+			]
+		}
+	],
+	"vim.normalModeKeyBindingsNonRecursive": [
+		{
+			"before":["S"],
+			"commands":[":w!"],
+		},
+		{
+			"before":["Q"],
+			"commands":[":q!"],
+		},
+		{
+			"before": [
+				"<leader>",
+				"f"
+			],
+			"commands": [
+				"editor.action.formatDocument"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"u"
+			],
+			"commands": [
+				"editor.action.referenceSearch.trigger"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"U"
+			],
+			"commands": [
+				"references-view.findReferences"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"i",
+				"n"
+			],
+			"commands": [
+				"references-view.showCallHierarchy"
+			]
+		},
+		// run -matlab
+		{
+			
+			"before": [
+				"<leader>",
+				"R"
+			],
+			"commands": [
+				"workbench.action.files.save",
+				"matlab-interactive-terminal.runMatlabScript"
+			]
+
+		},
+		{
+			"before": [
+				"<leader>",
+				"/"
+			],
+			"commands": [
+				"workbench.action.files.save",
+				"matlab-interactive-terminal.openMatlabTerminal"
+			]
+		},
+		// -- debug
+		{
+			"before": [
+				"<leader>",
+				"r"
+			],
+			"commands": [
+				"workbench.action.files.save",
+				"workbench.action.debug.run"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"d",
+				"r"
+			],
+			"commands": [
+				"workbench.action.files.save",
+				"workbench.action.debug.start"
+			]
+		},
+		// -- debug
+		{
+			"before": [
+				"<leader>",
+				"d",
+				"b"
+			],
+			"commands": [
+				"editor.debug.action.toggleBreakpoint"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"d",
+				"c"
+			],
+			"commands": [
+				"editor.debug.action.conditionalBreakpoint"
+			]
+		},
+		// -- problem nav
+		{
+			"before": [
+				"<leader>",
+				"d",
+				"k"
+			],
+			"commands": [
+				"editor.action.marker.prev"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"d",
+				"j"
+			],
+			"commands": [
+				"editor.action.marker.next"
+			]
+		},
+		// -- git hunk nav
+		{
+			"before": [
+				"<leader>",
+				"h",
+				"k"
+			],
+			"commands": [
+				"workbench.action.editor.previousChange",
+				"editor.action.dirtydiff.previous"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"h",
+				"j"
+			],
+			"commands": [
+				"workbench.action.editor.nextChange",
+				"editor.action.dirtydiff.next"
+			]
+		},
+		// git (un)stage 
+		{
+			"before": [
+				"<leader>",
+				"h",
+				"s"
+			],
+			"commands": [
+				"git.stage",
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"h",
+				"u"
+			],
+			"commands": [
+				"git.unstage",
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"h",
+				"r"
+			],
+			"commands": [
+				"git.revertSelectedRanges",
+			]
+		},
+		// -- rename symbol
+		{
+			"before": [
+				"<leader>",
+				"r",
+				"n"
+			],
+			"commands": [
+				"editor.action.rename",
+			]
+		},
+	],
+	"vim.visualModeKeyBindings": [
+		{ // which key
+			"before": [
+				"`"
+			],
+			"commands": [
+				"whichkey.show"
+			]
+		},
+		// repeatly indent in visual mode
+		{
+			"before": [
+				">"
+			],
+			"commands": [
+				"editor.action.indentLines"
+			]
+		},
+		{
+			"before": [
+				"<"
+			],
+			"commands": [
+				"editor.action.outdentLines"
+			]
+		}
+	],
+	"vim.visualModeKeyBindingsNonRecursive": [
+		{
+			"before": [
+				"<leader>",
+				"f"
+			],
+			"commands": [
+				"editor.action.formatSelection"
+			]
+		},
+		{ // p action will not override clipboard content
+			"before": [
+				"p"
+			],
+			"after": [
+				"p",
+				"g",
+				"v",
+				"y",
+			]
+		},
+	],
+	/* vim settings end */
+	"vsicons.dontShowNewVersionMessage": true,
+	/* which key bindings */
+	"whichkey.bindings": [
+		{
+			"key": "e",
+			"name": "Show tree/explorer view",
+			"type": "conditional",
+			"bindings": [
+				{
+					"key": "",
+					"name": "default",
+					"type": "command",
+					"command": "workbench.view.explorer"
+				},
+				{
+					"key": "when:sideBarVisible && explorerViewletVisible",
+					"name": "Hide explorer",
+					"type": "command",
+					"command": "workbench.action.toggleSidebarVisibility"
+				}
+			],
+		},
+		{
+			"key": "o",
+			"name": "Outline",
+			"type": "conditional",
+			"bindings": [
+				{
+					"key": "",
+					"name": "default",
+					"type": "command",
+					"command": "extension.multiCommand.execute",
+					"args": {
+						"sequence": [
+							"outline.focus",
+							"outline.focus",
+						]
+					},
+				},
+				{
+					"key": "when:outlinerExplorerView.active && view.outline.visible",
+					"name": "Hide outline",
+					"type": "command",
+					"command": "workbench.action.toggleAuxiliaryBar"
+				}
+			],
+		},
+		{
+			"key": "g",
+			"name": "Source contrl",
+			"type": "command",
+			"command": "workbench.view.scm",
+		},
+		{
+			"command": "workbench.action.quickOpen",
+			"key": "f",
+			"name": "Find file",
+			"type": "command"
+		},
+		{
+			"command": "workbench.view.search",
+			"key": "w",
+			"name": "Search Word",
+			"type": "command"
+		},
+		{
+			"command": "search.action.openEditor",
+			"key": "F",
+			"name": "New Search Editor",
+			"type": "command"
+		},
+		{
+			"command": "workbench.action.gotoSymbol",
+			"key": "s",
+			"name": "Search document symbol",
+			"type": "command"
+		},
+		{
+			"command": "workbench.action.showAllSymbols",
+			"key": "S",
+			"name": "Search project symbol",
+			"type": "command"
+		},
+	],
+	"terminal.integrated.gpuAcceleration": "off",
+	"workbench.iconTheme": "material-icon-theme",
+	"tabnine.experimentalAutoImports": true,
+	"kite.showWelcomeNotificationOnStartup": false,
+	"winopacity.opacity": 233,
+	"bracket-pair-colorizer-2.depreciation-notice": false,
+	"workbench.colorTheme": "Xcode 11 Default Dark",
+}
